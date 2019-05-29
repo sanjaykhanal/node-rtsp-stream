@@ -1,3 +1,6 @@
+This project is a fork from https://github.com/kyriesent/node-rtsp-stream
+Simple modification is made to the project to support streaming of local video file honoring the local file's frame rate.
+
 node-rtsp-stream
 ================
 
