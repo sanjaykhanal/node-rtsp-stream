@@ -1,5 +1,5 @@
 {
-  "name": "node-rtsp-stream",
+  "name": "node-rtsp-stream-il",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyriesent/node-rtsp-stream.git"
+    "url": "https://github.com/sanjaykhanal/node-rtsp-stream.git"
   },
   "author": "David Jsa <david@jsa.me>",
   "license": "MIT",
