@@ -12,6 +12,7 @@ STREAM_MAGIC_BYTES = "jsmp" // Must be 4 bytes
 
 VideoStream = function(options) {
   this.options = options
+  this.rtspTransport = options.rtspTransport
   this.name = options.name
   this.streamUrl = options.streamUrl
   this.width = options.width
@@ -37,7 +38,8 @@ VideoStream.prototype.startMpeg1Stream = function() {
   var gettingInputData, gettingOutputData, inputData, outputData
   this.mpeg1Muxer = new Mpeg1Muxer({
     ffmpegOptions: this.options.ffmpegOptions,
-    url: this.streamUrl
+    url: this.streamUrl,
+    rtspTransport: this.options.rtspTransport
   })
   this.stream = this.mpeg1Muxer.stream
   if (this.inputStreamStarted) {

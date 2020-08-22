@@ -10,6 +10,7 @@
     return it('should not throw an error when instantiated', function(done) {
       var videoStream;
       videoStream = new VideoStream({
+        rtspTransport: 'tcp',
         name: 'wowza',
         streamUrl: 'rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov',
         wsPort: 9999,

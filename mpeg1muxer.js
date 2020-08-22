@@ -9,6 +9,7 @@ events = require('events')
 Mpeg1Muxer = function(options) {
   var key
   this.url = options.url
+  this.rtspTransport = options.rtspTransport
   this.ffmpegOptions = options.ffmpegOptions
   this.exitCode = undefined
   this.additionalFlags = []
@@ -21,6 +22,8 @@ Mpeg1Muxer = function(options) {
     }
   }
   this.spawnOptions = [
+    "-rtsp_transport",
+    this.rtspTransport,
     "-re",
     "-i",
     this.url,
